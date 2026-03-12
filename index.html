@@ -427,13 +427,23 @@
 
   /* Responsive */
   @media (max-width: 768px) {
+    body {
+      cursor: auto;
+    }
+    .cursor,
+    .cursor-ring {
+      display: none;
+    }
     nav { padding: 1.25rem 1.5rem; }
     .nav-links { display: none; }
     section { padding: 4rem 1.5rem; }
     #hero {
       padding: 7rem 1.5rem 4rem;
       flex-direction: column;
+      gap: 3rem;
     }
+    .hero-name { font-size: 2.6rem; }
+    .hero-subtitle { font-size: 0.9rem; }
     .hero-side-panel {
       width: 100%;
       align-items: flex-start;
@@ -447,11 +457,43 @@
     }
     .hero-side-card {
       width: 100%;
-      max-width: 360px;
+      max-width: 420px;
     }
     .about-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
     .hero-scroll-hint { left: 1.5rem; }
     .projects-grid { grid-template-columns: 1fr; }
+    footer { padding: 1.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    section { padding: 3.5rem 1.25rem; }
+    #hero {
+      padding: 6.5rem 1.25rem 3.5rem;
+    }
+    .hero-cta {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .btn-primary,
+    .btn-ghost {
+      justify-content: center;
+      width: 100%;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    .about-stats { grid-template-columns: 1fr; }
+    .contact-big {
+      font-size: 2.3rem;
+    }
+    .contact-link-item {
+      padding: 1rem 1.1rem;
+    }
+    footer {
+      padding: 1.25rem;
+    }
   }
 </style>
 </head>
